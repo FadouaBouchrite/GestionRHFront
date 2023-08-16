@@ -1,0 +1,49 @@
+/* Styles pour le header */
+header {
+    background-color: #F87171; /* Fond rouge plus clair */
+    color: white; /* Texte blanc */
+    padding: 20px; /* Espacement interne pour le contenu du header */
+    display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Les éléments sont alignés à gauche et à droite */
+  }
+  
+  /* Style pour les liens du header */
+  header a {
+    color: white; /* Texte blanc pour les liens */
+    text-decoration: none; /* Pas de soulignement pour les liens */
+    font-weight: bold;
+    transition: color 0.3s; /* Transition de couleur au survol */
+  }
+  
+  header a:hover {
+    color: #FCD34D; /* Couleur jaune au survol des liens */
+  }
+  
+  /* Bouton du menu pour les écrans mobiles */
+  header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style pour le menu de navigation sur les petits écrans */
+  nav {
+    display: none; /* Par défaut, le menu est masqué sur les petits écrans */
+    flex-direction: column; /* Les éléments sont empilés verticalement */
+    align-items: center; /* Les éléments sont centrés horizontalement */
+  }
+  
+  /* Style pour les liens du menu de navigation sur les petits écrans */
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0; /* Espacement entre les liens pour les écrans étroits */
+  }
+  
+  /* Affichage du menu de navigation sur les grands écrans */
+  @media screen and (min-width: 1024px) {
+    nav {
+      display: flex;
+    }
+  }
+  

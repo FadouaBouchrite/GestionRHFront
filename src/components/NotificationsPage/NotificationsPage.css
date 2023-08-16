@@ -1,0 +1,48 @@
+.unread {
+    display: none;
+}
+
+
+
+
+
+  .center{
+  margin:auto;
+  width:50%;
+  padding-left: 60px;
+  
+  
+  }
+  
+  input {
+    border-radius: 10px;
+  }
+  .read {
+      font-weight: bold;
+      color: black;
+  }
+  .cc{
+  
+    border: 1px solid black; 
+    padding: 8px;
+    
+  
+  }
+  .cc:hover{
+  
+    border: 1px solid black; 
+    padding: 8px;
+  background-color:  black;
+  
+  }
+  
+  
+  table {
+      border-collapse: collapse;
+    }
+  
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+  

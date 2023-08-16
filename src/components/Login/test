@@ -1,0 +1,101 @@
+import React, { useState } from "react";
+import { useEffect } from "react";
+import useAuthContext from "../context/AuthContext";
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+const {login,errors,message}=useAuthContext();
+ 
+ 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+try {
+  // const user = { email, password };
+
+  //   fetch('http://127.0.0.1:8000/api/v1/login', {
+  //     method: 'POST',
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "accept": "application/json"
+  //     },
+  //     body: JSON.stringify(user)
+  //   }).then(async response => {
+  //     if (!response.ok) {
+  //       const validation = await response.json();
+  //       setErrors(validation.errors);
+  //       console.log(validation.errors);
+  //     } else {
+  //       const data = await response.json();
+  //       const mssg = data.status;
+  //       if (data.code === 'succes') {
+  //         setEmail('');
+  //         setPassword('');
+  //         history('/');
+  //         setMessage(mssg);
+  //         // Authentification réussie, faites ce que vous souhaitez ici
+  //       } else {
+  //         console.log(data.authenticated);
+  //         console.log(data.email);
+  //         console.log(data.password);
+  //         history('/login');
+  //         setMessage(mssg);
+  //         // Authentification échouée, gérer l'erreur
+  //       }
+  //     }
+  //   })
+
+
+
+
+
+login({email,password})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+} catch (error) {
+  
+}
+} 
+
+  return (
+    <div className="h-screen overflow-hidden flex items-center justify-center" style={{ background: "#edf2f7" }}>
+      <div className="bg-gray-200 rounded py-16 px-12 m-16 flex flex-col items-center justify-center">
+        <img className="rounded-full h-32 w-32" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="user avatar" />
+        <form method="post" className="mt-8 mb-4" onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label htmlFor="userEmail" className="sr-only">Email address</label>
+            <input className="border-solid border border-gray-400 rounded px-2 py-3" type="email" id="userEmail" placeholder="Email address" value={email} onChange={(e) => { setEmail(e.target.value);  }} required />
+          </div>
+          <div>
+            <label htmlFor="userPass" className="sr-only">Password</label>
+            <input className="border-solid border border-gray-400 rounded px-2 py-3" type="password" id="userPass" placeholder="Password" value={password} onChange={(e) => { setPassword(e.target.value) }} required />
+          </div>
+          <div style={{ color: "red" }}>{message}</div>
+          {errors.password && (
+            <span>{errors.password}</span>
+          )}
+          <br />
+          <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold w-full py-3" type="submit">Sign in</button>
+        </form>
+        <a href="/forgot" className="self-start">Forgot the password?</a>
+      </div>
+    </div>
+  );
+          }

@@ -1,0 +1,15 @@
+.floating-icon {
+    position: fixed;
+    bottom: 20px; /* Ajustez cette valeur pour définir la distance depuis le bas */
+    right: 20px; /* Ajustez cette valeur pour définir la distance depuis la droite */
+    background-color: #007bff; /* Couleur de fond de l'icône */
+    color: #ffffff; /* Couleur du texte de l'icône */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+  }
